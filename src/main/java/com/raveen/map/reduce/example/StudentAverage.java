@@ -32,7 +32,7 @@ public class StudentAverage {
 
             String studentId = studentDetails[0];
             Text studentIdKey = new Text(studentId);
-            String[] studentMarks = Arrays.copyOfRange(studentDetails, 1, 4);
+            String[] studentMarks = Arrays.copyOfRange(studentDetails, 1, 6);
             for (String mark: studentMarks) {
                 IntWritable markValue = new IntWritable(Integer.parseInt(mark));
                 context.write(studentIdKey, markValue);
