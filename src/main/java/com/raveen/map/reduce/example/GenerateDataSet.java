@@ -4,15 +4,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-
 /**
  * This class is used to generate a dataset which contains students ids with marks.
  */
 public class GenerateDataSet {
 
     public static void generateStudentMarks(int dataSetLimit) throws IOException {
-        PrintWriter writer = new PrintWriter("student-marks.txt", UTF_8);
+        PrintWriter writer = new PrintWriter("student-marks.txt", "UTF-8");
         for (int i=0; i < dataSetLimit; i ++) {
             String studentId = getSaltString(8);
             int mark1 = generateRandomMark(0, 100);
